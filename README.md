@@ -15,6 +15,11 @@ Bu proje, C# Windows Forms (.NET 10.0) kullanılarak geliştirilmiş; `TcpListen
 * **Asenkron Mimari (`async/await`):** Arayüz donmalarını önlemek için istemci kabulü, mesaj yayını (`BroadcastAsync`) ve okuma işlemleri tamamen asenkron yürütülür.
 * **Çoklu İstemci & Zaman Damgası:** Birden fazla kullanıcı aynı anda ortak odaya katılabilir; tüm mesajlar saat bilgisiyle (`[HH:mm:ss]`) hem sunucu günlüğünde hem de bağlı istemcilerde anlık listelenir.
 
+* ## Bilinen Sınırlamalar ve Geliştirme Notları
+
+* Uygulama yerel ağ (`127.0.0.1` / LAN) üzerinde TCP soket iletişimi kurar; farklı ağlar üzerinden bağlantı için port yönlendirme (NAT/Port Forwarding) gerekir.
+* İletilen mesajlar düz metin UTF-8 akışı üzerinden gönderilmektedir; uçtan uca şifreleme (TLS/AES) ve dosya transferi desteği sonraki sürümlerde eklenebilir.
+
 ## Kurulum ve Çalıştırma
 
 1. Depoyu bilgisayarınıza klonlayın:
